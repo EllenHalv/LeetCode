@@ -7,6 +7,7 @@ import java.util.*;
  * Reverse Vowels of a String.
  * Author: Ellen Halvardsson
  */
+
 public class LC345 {
     public String reverseVowels(String s) {
         // make a linked hash map for all vowels found

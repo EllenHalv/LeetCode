@@ -2,15 +2,21 @@ package org.example.solutions;
 
 import java.util.Arrays;
 
+/**
+ * LeetCode 605.
+ * Can Place Flowers.
+ * Author: Ellen Halvardsson
+ */
+
 public class LC605 {
     // My improved version
     public boolean canPlaceFlower(int[] flowerbed, int n) {
-        // variable that counts how many flowers can be planted
+        // variable keeping count of how many flowers can be planted
         int flowerCount = 0;
         int length = flowerbed.length;
 
         if (length >= 3) {
-            // Loop through the flowerbed checking boundaries separately
+            // loop through the flowerbed checking boundaries separately
             for (int i = 0; i < length; i++) {
                 // Special check for the first element
                 if (i == 0) {
@@ -20,6 +26,7 @@ public class LC605 {
                     }
                 }
                 // Special check for the last element
+                // check if 'i' is the last index in flowerbed array
                 else if (i == length - 1) {
                     if (flowerbed[i-1] == 0 && flowerbed[i] == 0) {
                         flowerbed[i] = 1;
@@ -37,10 +44,10 @@ public class LC605 {
         } else if (length == 2) {
             // For a flowerbed of length 2, check if both spots are empty.
             if (flowerbed[0] == 0 && flowerbed[1] == 0) {
-                flowerCount++;  // Only one flower can be planted safely.
+                flowerCount++;  // Only one flower can be planted
             }
         } else { // length == 1
-            // Only one spot available.
+            // only one spot available
             if (flowerbed[0] == 0) {
                 flowerCount++;
             }
@@ -50,13 +57,7 @@ public class LC605 {
         return flowerCount >= n;
     }
 
-
-
-
-
-
-
-    // My origial solution
+    // My origial solution (passed initial tests, but failed on submission)
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         // n is always = or smaller than flowerbed.length
         // flowerbed.length is always = or larger than 1, and = or smaller than 20.000
