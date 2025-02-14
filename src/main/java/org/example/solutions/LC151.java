@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * LC151.
+ * Reverse Words in a String.
+ * Author: Ellen Halvardsson.
+ */
 public class LC151 {
 
     // Very improved version using regex, Collections class and String.join

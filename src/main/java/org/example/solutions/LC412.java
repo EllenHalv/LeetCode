@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * LeetCode 412. FizzBuzz.
+ * LeetCode 412.
+ * FizzBuzz.
+ * Author: Ellen Halvardsson.
  */
 public class LC412 {
     public List<String> fizzBuzz(int n) {
